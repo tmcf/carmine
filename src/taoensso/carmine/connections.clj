@@ -53,8 +53,8 @@
 ;;;
 
 (defn make-new-connection
-  [{:keys [host port password db conn-setup-fn
-           conn-timeout-ms read-timeout-ms timeout-ms] :as spec
+  [{:keys [timeout-ms host port password db conn-setup-fn
+           conn-timeout-ms read-timeout-ms] :as spec
     :or   {conn-timeout-ms (or timeout-ms 4000)
            read-timeout-ms timeout-ms}}]
   (let [socket-address (InetSocketAddress. ^String host ^Integer port)

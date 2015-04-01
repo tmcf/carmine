@@ -1,4 +1,4 @@
-(defproject com.taoensso/carmine "2.9.1"
+(defproject com.taoensso/carmine "2.9.1-PATCH-CLJ-ALPHA7-SNAPSHOT"
   :author "Peter Taoussanis <https://www.taoensso.com>"
   :description "Clojure Redis client & message queue"
   :url "https://github.com/ptaoussanis/carmine"
@@ -24,6 +24,7 @@
    :server-jvm {:jvm-opts ^:replace ["-server"]}
    :1.5  {:dependencies [[org.clojure/clojure     "1.5.1"]]}
    :1.6  {:dependencies [[org.clojure/clojure     "1.6.0"]]}
+   :1.7  {:dependencies [[org.clojure/clojure      "1.7.0-alpha6"]]}
    :test {:dependencies [[expectations            "2.1.0"]
                          [org.clojure/test.check  "0.7.0"]
                          [com.taoensso/faraday    "1.5.0"]
@@ -32,7 +33,7 @@
           :plugins [[lein-expectations "0.0.8"]
                     [lein-autoexpect   "1.4.2"]]}
    :dev
-   [:1.6 :test
+   [:1.7 :test
     {:plugins [[lein-ancient "0.6.4"]
                [codox        "0.8.11"]]}]}
 
